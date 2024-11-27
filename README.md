@@ -7,7 +7,6 @@
 - 社群分享功能
 
 ## 網站連結
-https://YOUR_USERNAME.github.io/REPO_NAME/
 
 ## 使用技術
 - HTML5
