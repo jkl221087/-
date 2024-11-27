@@ -1,0 +1,648 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: #0a0a0a;
+    color: #e5e5e5;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.95);
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #222;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3b82f6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: #60a5fa;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #e5e5e5;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: #3b82f6;
+    color: #000000;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.1), transparent 70%);
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    max-width: 800px;
+    padding: 3rem;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    background: linear-gradient(45deg, #60a5fa, #3b82f6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-btn {
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000;
+    background: #ffffff;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.hero-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* About Section */
+.about-section {
+    padding: 6rem 2rem;
+    background: #0f0f0f;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #3b82f6;
+}
+
+.about-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+/* Features Section */
+.features-section {
+    padding: 6rem 2rem;
+    background: #000000;
+}
+
+.features-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: #3b82f6;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.feature {
+    position: relative;
+    background: linear-gradient(145deg, #111111, #0a0a0a);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    border: 1px solid #222;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.feature::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.feature:hover::before {
+    transform: translateX(100%);
+}
+
+.feature h3 {
+    color: #3b82f6;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature p {
+    color: #a0aec0;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.5rem;
+    padding: 1rem;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 1rem;
+    color: #3b82f6;
+    transition: all 0.3s ease;
+}
+
+.feature:hover .feature-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #3b82f6;
+    color: #000000;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+#backToTop.visible {
+    opacity: 1;
+}
+
+#backToTop:hover {
+    background: #60a5fa;
+    transform: translateY(-2px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3b82f6;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #60a5fa;
+}
+
+/* Slide In Animation */
+.slide-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.slide-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature {
+        padding: 2rem;
+    }
+}
+
+/* 為不同元素設置不同的延遲 */
+.feature:nth-child(1) { transition-delay: 0.1s; }
+.feature:nth-child(2) { transition-delay: 0.2s; }
+.feature:nth-child(3) { transition-delay: 0.3s; }
+.feature:nth-child(4) { transition-delay: 0.4s; }
+.feature:nth-child(5) { transition-delay: 0.5s; }
+
+/* 標題動畫 */
+.features-title.slide-in {
+    transform: translateY(20px);
+}
+
+.features-title.visible {
+    transform: translateY(0);
+}
+
+/* Hero 區域動畫 */
+.hero-content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+}
+
+.hero-content.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 按鈕彈跳動畫 */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.bounce {
+    animation: bounce 2s ease;
+}
+
+/* 頁面載入動畫 */
+body {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+/* 介紹區塊動畫 */
+.about1.slide-in { transition-delay: 0.1s; }
+.about2.slide-in { transition-delay: 0.2s; }
+.about3.slide-in { transition-delay: 0.3s; }
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.feature-icon {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, 
+        rgba(59, 130, 246, 0.1) 0%, 
+        transparent 25%, 
+        transparent 75%, 
+        rgba(59, 130, 246, 0.1) 100%
+    );
+    background-size: 200% 200%;
+    animation: gradient 15s ease infinite;
+    pointer-events: none;
+}
+
+/* 主題相關樣式 */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --header-bg: #ffffff;
+  --feature-bg: #ffffff;
+  --border-color: #000000;
+}
+
+[data-theme="dark"] {
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --header-bg: #000000;
+  --feature-bg: #000000;
+  --border-color: #ffffff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* 主題切換按鈕樣式 */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(128, 128, 128, 0.1);
+}
+
+.theme-toggle svg {
+  width: 24px;
+  height: 24px;
+  color: var(--text-color);
+}
+
+/* 默認隱藏月亮圖標 */
+.moon-icon {
+  display: none;
+}
+
+/* 暗色模式時顯示月亮圖標，隱藏太陽圖標 */
+[data-theme="dark"] .sun-icon {
+  display: none;
+}
+
+[data-theme="dark"] .moon-icon {
+  display: block;
+}
+
+/* Header */
+header {
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Features Section */
+.features-section {
+  background: var(--background-color);
+}
+
+.feature {
+  background: var(--feature-bg);
+  border: 1px solid var(--border-color);
+}
+
+/* About Section */
+.about-section {
+  background: var(--background-color);
+}
+
+/* Hero Section */
+.hero-content {
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+}
+
+/* 修改所有固定的顏色值 */
+.nav-links a {
+  color: var(--text-color);
+}
+
+.nav-links a:hover {
+  background: var(--text-color);
+  color: var(--background-color);
+}
+
+.hero h1 {
+  color: var(--text-color);
+  background: none;
+  -webkit-text-fill-color: initial;
+}
+
+.feature h3 {
+  color: var(--text-color);
+}
+
+.feature p {
+  color: var(--text-color);
+}
+
+.feature-icon {
+  color: var(--text-color);
+  background: var(--background-color);
+}
+
+#backToTop {
+  background: var(--text-color);
+  color: var(--background-color);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-color);
+}
+
+/* 天氣顯示區域樣式 */
+.weather-container {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* 亮色主題樣式 */
+[data-theme="light"] .weather-container {
+    background: rgba(255, 255, 255, 0.9);
+    color: #000000;  /* 深色文字 */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .weather-extra {
+    color: rgba(0, 0, 0, 0.7);  /* 深色次要文字 */
+}
+
+[data-theme="light"] .refresh-btn {
+    color: #000000;  /* 深色按鈕 */
+}
+
+[data-theme="light"] .refresh-btn:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* 其他天氣顯示樣式保持不變 */
+.weather-info {
+    min-width: 250px;
+}
+
+.weather-location {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.refresh-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.refresh-btn:hover {
+    transform: rotate(180deg);
+}
+
+.temperature {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.weather-description {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.weather-description img {
+    width: 50px;
+    height: 50px;
+}
+
+.weather-extra {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+}
